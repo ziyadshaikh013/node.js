@@ -7,7 +7,7 @@ const stuffRouter = require('./router/stuff');
 const userRoute = require('./router/user')
 
 
-let mongoDb = 'mongodb+srv://ziyad:u5cVt2TFRvpA6tbB@cluster0-tnkys.mongodb.net/test';
+let mongoDb = process.env.MONGODB_URL || 'mongodb+srv://ziyad:u5cVt2TFRvpA6tbB@cluster0-tnkys.mongodb.net/test';
 
 mongoose.connect(mongoDb, {
         useNewUrlParser: true
